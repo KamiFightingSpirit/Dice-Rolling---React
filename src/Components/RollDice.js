@@ -26,14 +26,17 @@ class RollDice extends Component {
     };
     
 
-    render() {     
-        let disabled = this.state.rolling ? true : false;
+    render() {             
         let diceText = this.state.rolling ? "Rolling..." : "Roll the Dice!";
         return(
             <div className="rollDice">
                 <h1>Hello...</h1>  
                 <Die dieOneVal={this.state.dieOneVal} dieTwoVal={this.state.dieTwoVal} rolling={this.state.rolling}/> 
-                <div><button id="Button" onClick={ this.roll } disabled={disabled}> { diceText } </button></div>            
+                <div><button id="Button" 
+                    onClick={ this.roll } 
+                    disabled={ this.state.rolling }> 
+                    { diceText } 
+                </button></div>            
             </div>            
         )
     }
