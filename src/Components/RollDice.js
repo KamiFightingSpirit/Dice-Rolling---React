@@ -19,30 +19,22 @@ class RollDice extends Component {
                 dieTwoVal : dieTwo, 
                 rolling : true,
             }
-        );
-       
+        );       
         setTimeout(() => {
             this.setState({rolling: false});            
-          }, 500)
-       
+          }, 500)       
     };
     
 
-    render() {
-     
+    render() {     
         let disabled = this.state.rolling ? true : false;
         let diceText = this.state.rolling ? "Rolling..." : "Roll the Dice!";
         return(
             <div className="rollDice">
-                <h1>Hello...</h1>                
-                
+                <h1>Hello...</h1>  
                 <Die dieOneVal={this.state.dieOneVal} dieTwoVal={this.state.dieTwoVal} rolling={this.state.rolling}/> 
-                
                 <div><button id="Button" onClick={ this.roll } disabled={disabled}> { diceText } </button></div>            
-
-                
-            </div>
-            
+            </div>            
         )
     }
 }

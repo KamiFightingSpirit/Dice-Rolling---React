@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import './Die.css';
 
 class Die extends Component{ 
-
     render(){
         let dieOne = `fas fa-dice-${numWrite(this.props.dieOneVal)}`;
         let dieTwo = `fas fa-dice-${numWrite(this.props.dieTwoVal)}`;
@@ -30,8 +29,7 @@ class Die extends Component{
         return(
             <div id={shaking}>
                 <i className={dieOne}></i>
-                <i className={dieTwo}></i>
-                
+                <i className={dieTwo}></i>                
             </div>
         )
     }
